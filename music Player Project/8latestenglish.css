@@ -1,0 +1,62 @@
+.latest-english-container {
+    background-color: black;
+    width: 100%;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.latest-hindi-container{
+    margin-bottom: 11.5vh;
+}
+
+.latest-english-header {
+    width: 100%;
+}
+
+.latest-english-header p {
+    color: #CECFD3;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.latest-english-content {
+    font-size: 0.9rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.latest-english-card-container {
+    width: 14%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.latest-english-card-container img {
+    width: 100%;
+}
+
+.latest-english-song-info{
+    color: white;
+}
+
+.latest-english-song{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.latest-english-date{
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 750px) {
+    .latest-english-container{
+        padding-right: 1rem;
+    }
+}

@@ -1,0 +1,151 @@
+.stations-container {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    width: 100%;
+    background-color: rosybrown;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+}
+
+.stations-logo-container {
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.stations-logo-container:before{
+    content: "";
+    display: block;
+    margin-top: 100%;
+}
+
+.stations-logo-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(asthetic2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.stations-img-container {
+    width: 15%;
+    position: relative;
+}
+
+.stations-img {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    filter: blur(1.1px);
+
+}
+
+.stations-img:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.img {
+    filter: blur(1.1px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center;
+    background-size: cover;
+    border-radius: 4rem;
+    border-radius: 50%;
+}
+
+.img-1{
+    background-image: url(heartOnBeach4.png);
+}
+
+.img-2 {
+    background-image: url(retro.png);
+}
+
+.img-3 {
+    background-image: url(chill.png);
+}
+
+.img-5 {
+    background-image: url(rock.png);
+}
+
+.img-6 {
+    background-image: url(pop.png);
+}
+
+.stations-para {
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    color: white;
+    top: 45%;
+    margin-top: -5px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 1100px){
+    .stations-para {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .stations-logo-img-container{
+        font-size: 0.9rem;
+    }
+    .stations-para {
+        font-size:0.9rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .stations-logo-img-container{
+        font-size: 1.1rem;
+    }
+
+    .stations-container{
+        padding-right: 1rem;
+    }
+
+    .stations-para {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .stations-logo-img-container{
+        font-size: 0.9rem;
+    }
+    .stations-para {
+        font-size:0.9rem;
+    }
+}

@@ -1,0 +1,654 @@
+body{
+    background-color: rgb(9, 0, 59) !important;
+    height: auto;
+}
+
+main{
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
+
+.content{
+    height: auto;
+    width: 100%;
+    background-color: rgb(45, 0, 54);
+    box-shadow: 0 0 10px 1px darkgrey;
+    padding-left: 4.5%;
+    padding-right: 2.5%;
+
+}
+
+.artist-image-and-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 6%;
+    width: 88%;
+    height: 50vh;
+}
+
+
+.artist-image{
+    width: 40%;
+    height: 94%;
+    border: 1px solid;
+    padding: 1%;
+    box-shadow: 0 0 10px 5px darkgray inset ;
+
+}
+
+.artist-image img{
+    height: 100%;
+    width: 100%;
+}
+
+.artist-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 94%;
+    margin: 6%;
+}
+
+.artist-name-and-followers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.artist-name{
+    color:aliceblue;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.artist-followers{
+    color: rgb(201, 201, 201);
+    font-size: 0.75rem;
+}
+
+.band{
+    color:rgb(189, 195, 201);
+    font-size: 1rem;
+}
+
+.band-info{
+    font-size: 0.75rem;
+    color:rgb(189, 195, 201);
+}
+
+.buttons{
+    display: flex;
+    color: white;
+    font-weight: 600;
+}
+
+.play-all-button{
+    margin-top: 0.3rem;
+    margin-right: 2rem;
+    padding: 0.5rem;
+    background: linear-gradient(to right, violet, indigo);
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+.follow-button{
+    margin-top: 0.3rem;
+    margin-right: 2rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.more-info{
+    font-size: 0.7rem;
+    color:rgb(189, 195, 201);
+}
+
+/* // this is song queue section */
+
+.below{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+.queue{
+    margin-top: 4vh;
+    width: 60%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    height: auto;
+    display: inline-block;
+}
+
+.queue-titlebar{
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.queue-title{
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.songs-list{
+    display: block;
+}
+
+.queue-element{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    background-color: rgb(48, 48, 97);
+    color: white;
+}
+
+.queue-element:hover{
+    box-shadow: 0 0 3px 1px grey;
+}
+
+.song-image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.queue-number{
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    color: rgb(167, 165, 165);
+}
+
+.image-container{
+    position: relative;
+}
+
+.queue-song-image{
+    opacity: 1;
+    transition: 0.25s ease-in-out;
+}
+
+.queue-song-play{
+    position: absolute;
+    top: 17%;
+    left: 25%;
+    text-align: center;
+    opacity: 0;
+}
+
+.queue-element:hover .queue-song-image{
+    opacity: 0.7;
+}
+
+.queue-element:hover .queue-song-play{
+    opacity: 1;
+
+}
+.image-container img{
+    width: 3rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.queue-element:hover .image-container img{
+    width: 3.25rem;
+}
+
+.song-and-artist-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.playing-queue-song{
+    color: #21B6D9;
+    transform: rotate(-90deg);
+    margin-right: 0.9rem;
+}
+
+.queue-song-name{
+    font-size: 1rem;
+    color: white;
+}
+
+.queue-artist-name{
+    font-size: 0.8rem;
+    color: rgb(167, 165, 165);
+}
+
+.queue-element:hover .queue-song-name{
+    font-size: 1.1rem;
+}
+.queue-element:hover .queue-artist-name{
+    font-size: 0.9rem;
+}
+
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 15%;
+}
+
+.heart-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: rgb(167, 165, 165);
+}
+
+.add-to-queue-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: rgb(167, 165, 165);
+}
+
+.queue-element:hover .heart-link{
+    font-size: 1rem;
+}
+
+.queue-element:hover .add-to-queue-link{
+    font-size: 1rem;
+}
+
+.add-to-queue-link:hover{
+    color: white;
+}
+
+.heart-link:hover{
+    color: red;
+}
+
+
+/* // popular albums */
+
+.popular-albums{
+    display: inline-block;
+    margin-top: 4vh;
+    width: 35%;
+    background-color: black;
+    height: 100vh;
+}
+
+.popular-album-title{
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.albums-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.albums-container2{
+    visibility: collapse;
+}
+
+.album{
+    display: flex;
+    align-items: center;
+}
+
+.card{
+    margin-top: 1rem;
+    height: 10% !important;
+    width: 90%;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 1rem;
+    background-color: rgb(48, 48, 97) !important;
+    color: white;
+}
+
+.card-body{
+    display: flex;
+}
+
+.name-and-date{
+    display: flex;
+    flex-direction: column;
+}
+
+.album-name{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.release-date{
+    font-size: 0.8rem;
+    color: darkgray;
+    font-weight: 800;
+}
+
+.songs{
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.duration{
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+    .artist-image-and-info{
+        height: 35vh;
+    }
+
+    .artist-name-and-followers{
+        margin-bottom: 0.1rem;
+    }
+    
+    .artist-name{
+        font-size: 1rem;
+    }
+    
+    .artist-followers{
+        font-size: 0.55rem;
+    }
+    
+    .band{
+        font-size: 0.8rem;
+    }
+    
+    .band-info{
+        font-size: 0.6rem;
+    }
+    
+    .buttons{
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    
+    .play-all-button{
+        margin-top: 0.2rem;
+        margin-right: 1.5rem;
+        padding: 0.3rem;
+        border: 1.5px solid white;
+        border-radius: 2px;
+    }
+    
+    .follow-button{
+        margin-top: 0.25rem;
+        margin-right: 1.5rem;
+        padding: 0.35rem;
+    }
+    
+    .more-info{
+        font-size: 0.6rem;
+        color:rgb(189, 195, 201);
+    }
+
+.queue{
+    margin-top: 2vh;
+}
+
+.queue-titlebar{
+    height: 2.5vh;
+}
+
+.queue-title{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.songs-list{
+    display: block;
+}
+
+.queue-element{
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0.75rem;
+}
+
+.queue-number{
+    margin-right: 0.75rem;
+    font-size: 0.7rem;
+}
+
+.image-container img{
+    width: 2.25rem;
+    margin-right: 0.8rem;
+}
+
+.queue-element:hover .image-container img{
+    width: 2.5rem;
+}
+
+.queue-song-name{
+    font-size: 0.8rem;
+}
+
+.queue-artist-name{
+    font-size: 0.65rem;
+}
+
+.queue-element:hover .queue-song-name{
+    font-size: 0.85rem;
+}
+.queue-element:hover .queue-artist-name{
+    font-size: 0.7rem;
+}
+
+.heart-link{
+    font-size: 0.75rem;
+}
+
+.add-to-queue-link{
+    font-size: 0.75rem;
+}
+
+.queue-element:hover .heart-link{
+    font-size: 0.85rem;
+}
+
+.queue-element:hover .add-to-queue-link{
+    font-size: 0.85rem;
+}
+
+/* // popular albums */
+
+.popular-albums{
+    margin-top: 2vh;
+}
+
+.popular-album-title{
+    height: 2.5vh;
+}
+ 
+.card{
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.album-name{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.release-date{
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+
+.songs{
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+}
+
+.duration{
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+}
+
+@media screen and (max-width: 750px) {
+    
+    .content{
+        padding-left: 2.5%;
+    }
+    
+    .below{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .queue{
+        width: 100%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        display: block;
+    }
+    
+    .queue-titlebar{
+        width: 100%;
+        height: 3vh;
+    }
+    
+    .queue-title{
+        color: white;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    .queue-element{
+        height: 4.5rem;
+        margin-top: 0.7rem;
+    }
+    
+    .queue-number{
+        font-size: 0.9rem;
+    }
+    
+    .image-container img{
+        width: 2.5rem;
+    }
+    
+    .queue-element:hover .image-container img{
+        width: 2.75rem;
+    }
+    
+    .queue-song-name{
+        font-size: 0.9rem;
+    }
+    
+    .queue-artist-name{
+        font-size: 0.75rem;
+    }
+    
+    .queue-element:hover .queue-song-name{
+        font-size: 0.95rem;
+    }
+    .queue-element:hover .queue-artist-name{
+        font-size: 0.8rem;
+    }
+    
+    .heart-link{
+        font-size: 0.95rem;
+        margin-right: 1.5rem;
+    }
+    
+    .add-to-queue-link{
+        font-size: 0.95rem;
+        margin-right: 1.5rem;
+    }
+    
+    .queue-element:hover .heart-link{
+        font-size: 1.15rem;
+    }
+    
+    .queue-element:hover .add-to-queue-link{
+        font-size: 1.15rem;
+    }
+
+    .popular-albums{
+        margin-top: 2.5vh;
+        width: 100%;
+    }
+
+    .popular-albums .queue-titlebar{
+        margin-left: 4.5%;
+    }
+
+    .albums-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-right: 2.5%;
+        padding-left: 2.5%;
+        width: 100%;
+        height:auto;
+    }
+
+    .card{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .card{
+        margin-top: 0.5rem;
+        padding-top: 0.75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .album-name{
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    .release-date{
+        font-size: 0.6rem;
+        font-weight: 700;
+    }
+    
+    .songs{
+        margin-top: 0.45rem;
+        font-size: 0.7rem;
+    }
+    
+    .duration{
+        font-size: 0.7rem;
+        margin-bottom: 0.45rem;
+    }
+    
+    .albums-container2{
+        margin-top: 1.5%;
+        visibility: visible;
+    }
+    
+    
+}

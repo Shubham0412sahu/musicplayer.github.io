@@ -1,0 +1,218 @@
+.content{
+    display: flex;
+    width: 100%;
+    background-color: #101743;
+    justify-content: space-evenly;
+    z-index: 30;
+}
+
+.left-content{
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+#slider {
+    margin-top: 12.5vh !important;
+    margin-top: 5vh;
+    margin-bottom: 10px;
+    height: 35vh;
+    min-height: 200px;
+    max-height: 300px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;    
+    display: flex;
+    justify-content: center;
+}
+
+/* SETTING RADIO BUTTONS POSITION */
+#slider input{
+    position: absolute;
+    top: 85%;
+}
+
+.slide img{
+    height: 100%;
+    width: 100%;
+}
+
+#s1{ left: 40%; }
+#s2{ left: 44%; }
+#s3{ left: 48%; }
+#s4{ left: 52%; }
+#s5{ left: 56%; }
+
+#slider label {
+    margin: auto;
+    width: 50%;
+    max-width: 350px;
+    height: 80%;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: transform 0.6s ease;
+}
+
+/* FOR CAROUSEL FUCTION - CLICK ON THE RADIO BUTTONS OR ON THE IMAGES*/
+
+/* transform: translate3d(x-axis, y-axis, perspective); */
+
+/* left-most */
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    transform: translate3d(-80%, 2%, -400px);
+    
+}
+
+/* right most  */
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    transform: translate3d(80%, 2%, -400px);
+}
+
+/* left-second */
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(-40%, 1%, -200px);
+}
+
+/* centre  */
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+    box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
+    transform: translate3d(0, 0, 0);
+}
+
+
+/* second from the right  */
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(40%, 1%, -200px);
+}
+
+/* right most  */
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    transform: translate3d(80%, 2%, -400px);
+}
+
+@media screen and (max-width: 750px) {
+    #slider{
+        margin-top: 4.5vh !important;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    
+    .genre-img-container p {
+        font-size: 1.2rem;
+    }
+
+    .stations-logo-img-container{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .stations-logo-img-container{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .latest-english-header p {
+        font-size: 1rem;
+    }
+    
+    .latest-english-song{
+        font-size: 0.9rem !important;
+    }
+    
+    .latest-english-date{
+        font-size: 0.8rem !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    
+    .navigation-bar{
+        height: 7.5vh;
+    }
+
+    .navigation-right{
+        width: 55%;
+        padding-right: 3%;
+    }
+
+    .favourite-link a{
+        font-size: 1rem;
+    }
+
+    .favourite-link a:hover{
+        font-size: 1.2rem;
+    }
+
+    .search-bar{
+        height: 50%;
+        border-radius: 8px;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .search-input{
+        font-size: 0.8rem;
+    }
+
+    .notification-icon a{
+        font-size: 1rem;
+    }
+    
+    .notification-icon a:hover{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .content{
+        display: block;
+    }
+    .left-content{
+        display: block;
+        width: 100%;
+    }
+
+    .current-playing{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    
+    .latest-english-header p {
+        font-size: 1rem;
+    }
+    
+    .latest-english-song{
+        font-size: 0.8rem !important;
+    }
+    
+    .latest-english-date{
+        font-size: 0.68rem !important;
+    }
+}

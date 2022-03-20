@@ -1,0 +1,95 @@
+.music-moods{
+    width: 100%;
+    height: auto;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 10vh;
+    padding-top: 3vh;
+}
+
+.music-mood-title{
+    z-index: 9;
+    background-color: rgb(61, 0, 102);
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 2vh;
+    margin-top: -3vh;
+    padding-left: 1.5rem;
+    font-weight: 900;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color:aliceblue
+}
+
+.mood-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.mood-image-container{
+    width: 27%;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.mood-image-container:hover{
+    width: 31%;
+    position: relative;
+}
+
+.moods-image{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.moods-image::before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.img1{
+    background-image: url(slowed.png);
+}
+.img2{
+    background-image: url(dopamine.png);
+}
+.img3{
+    background-image: url(energy.png);
+}
+
+
+@media screen and (max-width: 800px) {
+    .music-moods{
+        margin-top: 7.5vh;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .music-moods{
+        margin-top: 2.5vh;
+    }
+
+    .music-mood-title{
+        margin-bottom: 1vh;
+        font-size: 1rem;
+        height: 3rem;
+    }
+}

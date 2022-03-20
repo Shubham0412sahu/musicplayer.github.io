@@ -1,0 +1,116 @@
+.artists{
+    width: 100%;
+}
+
+.popular-artists-container {
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #101743;
+}
+
+.popular-artists-header {
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.popular-artists-header div {
+    color: #CECFD3;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.popular-artists-profile-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0.7rem;
+}
+
+.popular-artists-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 35%;
+}
+
+.popular-artists-profile div {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.popular_artists-image {
+    width: 75%;
+    position: relative;
+    overflow: hidden;
+}
+
+.popular_artists-image::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.popular-artists{
+    position: absolute;
+    padding-top: 42%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center;
+    background-size: 100% 100%;
+    background-size: cover;
+    border-radius: 4rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.popular-artists-1{
+    background-image: url(alan.png);
+}
+
+.popular-artists-2 {
+    background-image: url(edSheeran.png);
+}
+
+.popular-artists-3 {
+    background-image: url(drake.png);
+}
+
+.popular-artists-4 {
+    background-image: url(zayn.png);
+}
+
+.popular-artists-5 {
+    background-image: url(coldplayHoli.png);
+}
+
+.popular-artists-6 {
+    background-image: url(marsh.png);
+}
+
+.popular-artists>a {
+    position: static;
+    height: 0;
+    display: none;
+    overflow: hidden;
+    color: white;
+}
+
+.popular-artists:hover>a {
+    height: 4rem;
+    display: inline;
+}
+
+.popular-artists:hover {
+    opacity: 0.7;
+    color: white;
+}

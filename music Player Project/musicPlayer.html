@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="musicPlayer.css">
+    <link rel="stylesheet" href="1navigationBar.css">
+    <link rel="stylesheet" href="2queue.css">
+    <link rel="stylesheet" href="3moods.css">
+    <link rel="stylesheet" href="4latestRelease.css">
+    <link rel="stylesheet" href="5PopularArtist.css">
+    <link rel="stylesheet" href="6Stations.css">
+    <link rel="stylesheet" href="7genre.css">
+    <link rel="stylesheet" href="8latestenglish.css">
+    <link rel="stylesheet" href="9currentPlaying.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/91792a7faf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Music player</title>
+    <!-- 23. add a good logo with name -->
+</head>
+
+<body>
+
+    <div class="navigation-bar">
+        <div class="navigation-left">
+            <div class="logo">
+                <img src="musicPlayerLogo.png" alt="">
+            </div>
+            <div class="favourite-link">
+                <a href="">Favourite</a>
+            </div>
+        </div>
+        <div class="navigation-right">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="search-input" type="text" placeholder="serach">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+            <div class="notification-icon">
+                <a href="#notification">
+                    <i class="fa-solid fa-bell"></i>
+                </a>
+            </div>
+            <div class="profile">
+                <a href="#my-profile"><img class="profile-picture" src="profile.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    
+    <main class="content">
+
+        <div class="aside queue">
+            <div class="queue-titlebar">
+                <div class="queue-title"> Queue </div>
+                <div class="dropdown-queue">
+                    <button class="btn dropdown-toggle my-button" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        queue
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#"> playlist </a>
+                        <a class="dropdown-item" href="#"> favourite songs</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="queue-elements-container">
+    
+                <div class="queue-element">
+                    <div class="song-image-container">
+                        <div class="queue-number"> 01 </div>
+                        <div class="image-container">
+                            <img class="queue-song-image" src="my-universe.png" alt="">
+                            <div class="queue-song-play">
+                                <i class="queue-song-play-button fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-and-artist-container">
+                            <div class="queue-song-name"> My Universe </div>
+                            <div class="queue-artist-name"> Coldplay ft. BTS </div>
+                        </div>
+                    </div>
+                    <span class="heart-link">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                </div>
+    
+                <div class="queue-element">
+                    <div class="song-image-container">
+                        <div class="queue-number"> 02 </div>
+                        <div class="image-container">
+                            <img class="queue-song-image" src="ghost.png" alt="">
+                            <div class="queue-song-play">
+                                <i class="queue-song-play-button fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-and-artist-container">
+                            <div class="queue-song-name"> Ghost</div>
+                            <div class="queue-artist-name"> Justin Beiber </div>
+                        </div>
+                    </div>
+                    <span class="heart-link">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                </div>
+    
+                <div class="queue-element">
+                    <div class="song-image-container">
+                        <div class="queue-number"> 03 </div>
+                        <div class="image-container">
+                            <img class="queue-song-image" src="heat-waves.png" alt="">
+                            <div class="queue-song-play">
+                                <i class="queue-song-play-button fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-and-artist-container">
+                            <div class="queue-song-name"> Heatwaves </div>
+                            <div class="queue-artist-name"> Glass Animals </div>
+                        </div>
+                    </div>
+                    <span class="heart-link">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                </div>
+    
+                <div class="queue-element">
+                    <div class="song-image-container">
+                        <i class="fa-solid playing-queue-song fa-align-left"></i>
+                        <div class="image-container">
+                            <img class="queue-song-image" src="butter.png" alt="">
+                            <div class="queue-song-play">
+                                <i class="queue-song-play-button fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-and-artist-container">
+                            <div class="queue-song-name"> Butter </div>
+                            <div class="queue-artist-name"> BTS </div>
+                        </div>
+                    </div>
+                    <span class="heart-link">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                </div>
+    
+                <div class="queue-element">
+                    <div class="song-image-container">
+                        <div class="queue-number"> 05 </div>
+                        <div class="image-container">
+                            <img class="queue-song-image" src="cheapThrills.png" alt="">
+                            <div class="queue-song-play">
+                                <i class="queue-song-play-button fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-and-artist-container">
+                            <div class="queue-song-name"> Cheap thrills</div>
+                            <div class="queue-artist-name"> Sia ft. Sean Paul </div>
+                        </div>
+                    </div>
+                    <span class="heart-link">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                </div>
+    
+                <div class="queue-element">
+                    <div class="song-image-container">
+                        <div class="queue-number"> 06 </div>
+                        <div class="image-container">
+                            <img class="queue-song-image" src="memories.png" alt="">
+                            <div class="queue-song-play">
+                                <i class="queue-song-play-button fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-and-artist-container">
+                            <div class="queue-song-name"> Memories</div>
+                            <div class="queue-artist-name"> Maroon 5 </div>
+                        </div>
+                    </div>
+                    <span class="heart-link">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                </div>
+    
+                <div class="queue-element">
+                    <div class="song-image-container">
+                        <div class="queue-number"> 07 </div>
+                        <div class="image-container">
+                            <img class="queue-song-image" src="willo.png" alt="">
+                            <div class="queue-song-play">
+                                <i class="queue-song-play-button fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-and-artist-container">
+                            <div class="queue-song-name"> Willow</div>
+                            <div class="queue-artist-name"> Taylor Shift </div>
+                        </div>
+                    </div>
+                    <span class="heart-link">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                </div>
+    
+                <div class="queue-element">
+                    <div class="song-image-container">
+                        <div class="queue-number"> 08 </div>
+                        <div class="image-container">
+                            <img class="queue-song-image" src="adoreYou.png"">
+                            <div class=" queue-song-play">
+                            <i class="queue-song-play-button fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="song-and-artist-container">
+                        <div class="queue-song-name"> Adore You</div>
+                        <div class="queue-artist-name"> Harry Styles </div>
+                    </div>
+                </div>
+                <span class="heart-link">
+                    <i class="fa-solid fa-heart"></i>
+                </span>
+            </div>
+    
+            <div class="queue-element">
+                <div class="song-image-container">
+                    <div class="queue-number"> 09 </div>
+                    <div class="image-container">
+                        <img class="queue-song-image" src="blindingLights.png" alt="">
+                        <div class="queue-song-play">
+                            <i class="queue-song-play-button fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="song-and-artist-container">
+                        <div class="queue-song-name"> blinding Lights</div>
+                        <div class="queue-artist-name"> The Weeknd </div>
+                    </div>
+                </div>
+                <span class="heart-link">
+                    <i class="fa-solid fa-heart"></i>
+                </span>
+            </div>
+    
+            <div class="queue-element">
+                <div class="song-image-container">
+                    <div class="queue-number"> 10 </div>
+                    <div class="image-container">
+                        <img class="queue-song-image" src="dynamite.png"">
+                            <div class=" queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> dynamite </div>
+                    <div class="queue-artist-name"> BTS </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 11 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="perfect.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Perfect</div>
+                    <div class="queue-artist-name"> Ed Sheeran </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 12 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="youAndI.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> You & I</div>
+                    <div class="queue-artist-name"> One Direction </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 13 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="my-universe.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> My Universe </div>
+                    <div class="queue-artist-name"> Coldplay ft. BTS </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 14 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="butter.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Butter</div>
+                    <div class="queue-artist-name"> BTS </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 15 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="heat-waves.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Heatwaves </div>
+                    <div class="queue-artist-name"> Glass Animals </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 16 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="ghost.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Ghost </div>
+                    <div class="queue-artist-name"> Justin Beiber </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 17 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="cheapThrills.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Cheap thrills</div>
+                    <div class="queue-artist-name"> Sia ft. Sean Paul </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 18 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="memories.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Memories</div>
+                    <div class="queue-artist-name"> Maroon 5 </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 19 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="willo.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Willow</div>
+                    <div class="queue-artist-name"> Taylor Shift </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 20 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="adoreYou.png"">
+                    <div class=" queue-song-play">
+                    <i class="queue-song-play-button fa-solid fa-play"></i>
+                </div>
+            </div>
+            <div class="song-and-artist-container">
+                <div class="queue-song-name"> Adore You</div>
+                <div class="queue-artist-name"> Harry Styles </div>
+            </div>
+        </div>
+        <span class="heart-link">
+            <i class="fa-solid fa-heart"></i>
+        </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 21 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="blindingLights.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> blinding Lights</div>
+                    <div class="queue-artist-name"> The Weeknd </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 22 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="dynamite.png"">
+                    <div class=" queue-song-play">
+                    <i class="queue-song-play-button fa-solid fa-play"></i>
+                </div>
+            </div>
+            <div class="song-and-artist-container">
+                <div class="queue-song-name"> dynamite </div>
+                <div class="queue-artist-name"> BTS </div>
+            </div>
+        </div>
+        <span class="heart-link">
+            <i class="fa-solid fa-heart"></i>
+        </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 23 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="perfect.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Perfect</div>
+                    <div class="queue-artist-name"> Ed Sheeran </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 24 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="youAndI.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> You & I</div>
+                    <div class="queue-artist-name"> One Direction </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 25 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="my-universe.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> My Universe </div>
+                    <div class="queue-artist-name"> Coldplay ft. BTS </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 26 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="butter.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Butter</div>
+                    <div class="queue-artist-name"> BTS </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 27 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="heat-waves.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Heatwaves </div>
+                    <div class="queue-artist-name"> Glass Animals </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 28 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="ghost.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Ghost </div>
+                    <div class="queue-artist-name"> Justin Beiber </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 29 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="cheapThrills.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Cheap thrills</div>
+                    <div class="queue-artist-name"> Sia ft. Sean Paul </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 30 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="memories.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Memories</div>
+                    <div class="queue-artist-name"> Maroon 5 </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 31 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="willo.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Willow</div>
+                    <div class="queue-artist-name"> Taylor Shift </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 32 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="adoreYou.png"">
+                    <div class=" queue-song-play">
+                    <i class="queue-song-play-button fa-solid fa-play"></i>
+                </div>
+            </div>
+            <div class="song-and-artist-container">
+                <div class="queue-song-name"> Adore You</div>
+                <div class="queue-artist-name"> Harry Styles </div>
+            </div>
+        </div>
+        <span class="heart-link">
+            <i class="fa-solid fa-heart"></i>
+        </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 33 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="blindingLights.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> blinding Lights</div>
+                    <div class="queue-artist-name"> The Weeknd </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 34 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="dynamite.png"">
+                    <div class=" queue-song-play">
+                    <i class="queue-song-play-button fa-solid fa-play"></i>
+                </div>
+            </div>
+            <div class="song-and-artist-container">
+                <div class="queue-song-name"> dynamite </div>
+                <div class="queue-artist-name"> BTS </div>
+            </div>
+        </div>
+        <span class="heart-link">
+            <i class="fa-solid fa-heart"></i>
+        </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 35 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="perfect.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> Perfect</div>
+                    <div class="queue-artist-name"> Ed Sheeran </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        <div class="queue-element">
+            <div class="song-image-container">
+                <div class="queue-number"> 36 </div>
+                <div class="image-container">
+                    <img class="queue-song-image" src="youAndI.png" alt="">
+                    <div class="queue-song-play">
+                        <i class="queue-song-play-button fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-and-artist-container">
+                    <div class="queue-song-name"> You & I</div>
+                    <div class="queue-artist-name"> One Direction </div>
+                </div>
+            </div>
+            <span class="heart-link">
+                <i class="fa-solid fa-heart"></i>
+            </span>
+        </div>
+    
+        </div>
+        </div>
+
+        <div class="left-content">
+
+            <section id="slider">
+
+                <input type="radio" name="slider" id="s1">
+                <input type="radio" name="slider" id="s2">
+                <input type="radio" name="slider" id="s3" checked>
+                <input type="radio" name="slider" id="s4">
+                <input type="radio" name="slider" id="s5">
+
+                <label for="s1" class="slide" id="slide1">
+                    <img src="dynamite.png">
+                </label>
+
+                <label for="s2" class="slide" id="slide2">
+                    <img src="doobey.png">
+                </label>
+
+                <label for="s3" class="slide" id="slide3">
+                    <img src="perfect.png">
+                </label>
+
+                <label for="s4" class="slide" id="slide4">
+                    <img src="ran.png">
+                </label>
+
+                <label for="s5" class="slide" id="slide5">
+                    <img src="heat-waves.png">
+                </label>
+
+            </section>
+
+            <div class="latest-release-container">
+
+                <div class="latest-release-title">
+                    <div> Latest Release </div>
+                </div>
+
+                <div class="latest-release-album-container latest-release-album-container-1">
+                    <div class="latest-release-album-container">
+                        <div class="latest-release-album">
+                            <div class="latest-release-image-and-name">
+                                <div class="latest-release-image">
+                                    <img src="OneDperfect.png" alt="">
+                                </div>
+                                <div class="latest-release-name-and-date">
+                                    <div class="latest-release-name"> Perfect </div>
+                                    <div class="latest-release-date"> Dec 4, 2000</div>
+                                </div>
+                            </div>
+                            <div class="latest-release-dropdown-and-duration">
+                                <div class="btn-group">
+                                    <button type="button" class="btn" data-toggle="dropdown">
+                                        <div class="latest-release-dropdown"> <i class="fa-solid fa-ellipsis"></i>
+                                        </div>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <button class="dropdown-item" type="button"><i class="fa-solid fa-play"></i>
+                                            &nbsp; Play</button>
+                                        <button class="dropdown-item" type="button"><i class="fa-solid fa-bars"></i>
+                                            &nbsp; add to queue</button>
+                                        <button class="dropdown-item" type="button"><i class="fa-solid fa-heart"></i>
+                                            &nbsp; add to favourite </button>
+                                    </div>
+                                </div>
+
+                                <div class="latest-release-duration"> 2 : 48 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="latest-release-album-container">
+                        <div class="latest-release-album">
+                            <div class="latest-release-image-and-name">
+                                <div class="latest-release-image">
+                                    <img src="beatles.png" alt="">
+                                </div>
+                                <div class="latest-release-name-and-date">
+                                    <div class="latest-release-name"> The beatles </div>
+                                    <div class="latest-release-date"> May 3, 1996</div>
+                                </div>
+                            </div>
+                            <div class="latest-release-dropdown-and-duration">
+                                <div class="btn-group">
+                                    <button type="button" class="btn" data-toggle="dropdown">
+                                        <div class="latest-release-dropdown"> <i class="fa-solid fa-ellipsis"></i>
+                                        </div>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <button class="dropdown-item" type="button"><i class="fa-solid fa-play"></i>
+                                            &nbsp; Play</button>
+                                        <button class="dropdown-item" type="button"><i class="fa-solid fa-bars"></i>
+                                            &nbsp; add to queue</button>
+                                        <button class="dropdown-item" type="button"><i class="fa-solid fa-heart"></i>
+                                            &nbsp; add to favourite </button>
+                                    </div>
+                                </div>
+
+                                <div class="latest-release-duration"> 3 : 33 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="latest-release-album-container latest-release-album-container-2">
+                    <div class="latest-release-album-container">
+                        <div class="latest-release-album">
+                            <div class="latest-release-image-and-name">
+                                <div class="latest-release-image">
+                                    <img src="sugar.png" alt="">
+                                </div>
+                                <div class="latest-release-name-and-date">
+                                    <div class="latest-release-name"> Sugar </div>
+                                    <div class="latest-release-date"> Mar 25, 2008</div>
+                                </div>
+                            </div>
+                            <div class="latest-release-dropdown-and-duration">
+                                <div class="btn-group">
+                                    <button type="button" class="btn" data-toggle="dropdown">
+                                        <div class="latest-release-dropdown"> <i class="fa-solid fa-ellipsis"></i>
+                                        </div>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <button class="dropdown-item" type="button"><i class="fa-solid fa-play"></i>
+                                            &nbsp; Play</button>
+                                        <button class="dropdown-item" type="button"><i class="fa-solid fa-bars"></i>
+                                            &nbsp; add to queue</button>
+                                        <button class="dropdown-item" type="button"><i class="fa-solid fa-heart"></i>
+                                            &nbsp; add to favourite </button>
+                                    </div>
+                                </div>
+
+                                <div class="latest-release-duration"> 2 : 30 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="latest-release-album-container">
+                        <div class="latest-release-album">
+                            <div class="latest-release-image-and-name">
+                                <div class="latest-release-image">
+                                    <img src="onism.png" alt="">
+                                </div>
+                                <div class="latest-release-name-and-date">
+                                    <div class="latest-release-name"> Onism </div>
+                                    <div class="latest-release-date"> Aug 11, 2017 </div>
+                                </div>
+                            </div>
+                            <div class="latest-release-dropdown-and-duration">
+                                <div class="btn-group">
+                                    <button type="button" class="btn" data-toggle="dropdown">
+                                        <div class="latest-release-dropdown"> <i class="fa-solid fa-ellipsis"></i>
+                                        </div>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <button class="dropdown-item" type="button"><i class="fa-solid fa-play"></i>
+                                            &nbsp; Play</button>
+                                        <button class="dropdown-item" type="button"><i class="fa-solid fa-bars"></i>
+                                            &nbsp; add to queue</button>
+                                        <button class="dropdown-item" type="button"><i class="fa-solid fa-heart"></i>
+                                            &nbsp; add to favourite </button>
+                                    </div>
+                                </div>
+
+                                <div class="latest-release-duration"> 1 : 55 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="artist">
+                <div class="popular-artists-container">
+
+                    <div class="popular-artists-header">
+                        <div>Popular Artists</div>
+                    </div>
+
+                    <div class="popular-artists-profile-container">
+                        <div class="popular-artists-profile">
+                            <div class="popular_artists-image">
+                                <div class="popular-artists popular-artists-1">
+                                    <a href="musicPlayer2.html"><i class="fas popular-artists-play-btn fa-play"></i></a>
+                                </div>
+                            </div>
+                            <div class="popular-artist-name">Alan Walker</div>
+                        </div>
+
+                        <div class="popular-artists-profile">
+                            <div class="popular_artists-image">
+                                <div class="popular-artists popular-artists-2">
+                                    <a href="musicPlayer2.html"><i class="fas popular-artists-play-btn fa-play"></i></a>
+                                </div>
+                            </div>
+                            <div class="popular-artist-name">Ed Sheeran</div>
+                        </div>
+
+                        <div class="popular-artists-profile">
+                            <div class="popular_artists-image">
+                                <div class="popular-artists popular-artists-3">
+                                    <a href="musicPlayer2.html"><i class="fas popular-artists-play-btn fa-play"></i></a>
+                                </div>
+                            </div>
+                            <div class="popular-artist-name">Drake</div>
+                        </div>
+
+                        <div class="popular-artists-profile">
+                            <div class="popular_artists-image">
+                                <div class="popular-artists popular-artists-4">
+                                    <a href="musicPlayer2.html"><i class="fas popular-artists-play-btn fa-play"></i></a>
+                                </div>
+                            </div>
+                            <div class="popular-artist-name">Zayn</div>
+                        </div>
+
+                        <div class="popular-artists-profile">
+                            <div class="popular_artists-image">
+                                <div class="popular-artists popular-artists-5">
+                                    <a href="musicPlayer2.html"><i class="fas popular-artists-play-btn fa-play"></i></a>
+                                </div>
+                            </div>
+                            <div class="popular-artist-name"> Coldplay </div>
+                        </div>
+
+                        <div class="popular-artists-profile">
+                            <div class="popular_artists-image">
+                                <div class="popular-artists popular-artists-6">
+                                    <a href="musicPlayer2.html"><i class="fas popular-artists-play-btn fa-play"></i></a>
+                                </div>
+                            </div>
+                            <div class="popular-artist-name"> Marshmellow </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="stations">
+                <div class="stations-container">
+                    <div class="stations-logo-container">
+                        <div class="stations-logo-img-container">
+                            Stations
+                        </div>
+                    </div>
+
+                    <div class="stations-img-container">
+                        <div class="stations-img">
+                            <div class="img img-1">
+                            </div>
+                        </div>
+                        <p class="stations-para">Love</p>
+                    </div>
+
+                    <div class="stations-img-container">
+                        <div class="stations-img">
+                            <div class="img img-2">
+
+                            </div>
+                        </div>
+                        <p class="stations-para">Retro</p>
+                    </div>
+
+                    <div class="stations-img-container">
+                        <div class="stations-img">
+                            <div class="img img-3">
+
+                            </div>
+                        </div>
+                        <p class="stations-para">Chill</p>
+                    </div>
+
+                    <div class="stations-img-container">
+                        <div class="stations-img">
+                            <div class="img img-5">
+
+                            </div>
+                        </div>
+                        <p class="stations-para">Rock</p>
+                    </div>
+
+                    <div class="stations-img-container">
+                        <div class="stations-img">
+                            <div class="img img-6">
+                            </div>
+                        </div>
+                        <p class="stations-para">Pop</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="genre-container">
+
+                <div class="article-container">
+                    <div class="article-img-holder article-img-holder1"></div>
+                    <div class="article-img-para"> Beach </div>
+                </div>
+        
+                <div class="article-container">
+                    <div class="article-img-holder article-img-holder2"></div>
+                    <div class="article-img-para2"> Vintage </div>
+                </div>
+        
+                <div class="article-container">
+                    <div class="article-img-holder article-img-holder3"></div>
+                    <div class="article-img-para3"> Mountain </div>
+                </div>
+        
+            </div>
+
+            <div class="latest-english-container">
+                <div class="latest-english-header">
+                    <p>Latest English</p>
+                </div>
+
+                <div class="latest-english-content">
+                    <div class="latest-english-card-container">
+                        <img src="butter.png" />
+                        <div class="latest-english-song-info">
+                            <div class="latest-english-song">
+                                Butter
+                            </div>
+                            <div class="latest-english-date">
+                                Jan 4, 2022
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-english-card-container">
+                        <img src="dynamite.png" />
+                        <div class="latest-english-song-info">
+                            <div class="latest-english-song">
+                                Onism
+                            </div>
+                            <div class="latest-english-date">
+                                Feb 3, 2022
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-english-card-container">
+                        <img src="perfect.png" />
+                        <div class="latest-english-song-info">
+                            <div class="latest-english-song">
+                                Perfect
+                            </div>
+                            <div class="latest-english-date">
+                                Jan 14, 2022
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-english-card-container">
+                        <img src="heat-waves.png" />
+                        <div class="latest-english-song-info">
+                            <div class="latest-english-song">
+                                Waves
+                            </div>
+                            <div class="latest-english-date">
+                                Mar 28, 2022
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-english-card-container">
+                        <img src="ghost.png" />
+                        <div class="latest-english-song-info">
+                            <div class="latest-english-song">
+                                Ghost
+                            </div>
+                            <div class="latest-english-date">
+                                Jan 16, 2022
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-english-card-container">
+                        <img src="memories.png" />
+                        <div class="latest-english-song-info">
+                            <div class="latest-english-song">
+                                Memories
+                            </div>
+                            <div class="latest-english-date">
+                                Feb 3, 2021
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="latest-english-container latest-hindi-container">
+                <div class="latest-english-header">
+                    <p>Latest Hindi</p>
+                </div>
+
+                <div class="latest-english-content">
+                    <div class="latest-english-card-container">
+                        <img src="doobey.png" />
+                        <div class="latest-english-song-info">
+                            <div class="latest-english-song">
+                                Doobey
+                            </div>
+                            <div class="latest-english-date">
+                                Feb 11, 2022
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-english-card-container">
+                        <img src="sri.png" />
+                        <div class="latest-english-song-info">
+                            <div class="latest-english-song">
+                                Srivalli
+                            </div>
+                            <div class="latest-english-date">
+                                Dec 29, 2021
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-english-card-container">
+                        <img src="sak.png" />
+                        <div class="latest-english-song-info">
+                            <div class="latest-english-song">
+                                Sakhiyaan
+                            </div>
+                            <div class="latest-english-date">
+                                Jan 14, 2022
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-english-card-container">
+                        <img src="ran.png" />
+                        <div class="latest-english-song-info">
+                            <div class="latest-english-song">
+                                Ranjha
+                            </div>
+                            <div class="latest-english-date">
+                                Feb 2, 2021
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-english-card-container">
+                        <img src="soch.png" />
+                        <div class="latest-english-song-info">
+                            <div class="latest-english-song">
+                                Soch Liya
+                            </div>
+                            <div class="latest-english-date">
+                                Feb 28, 2022
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-english-card-container">
+                        <img src="kalle.png" />
+                        <div class="latest-english-song-info">
+                            <div class="latest-english-song">
+                                Kalle Kalle
+                            </div>
+                            <div class="latest-english-date">
+                                Oct 19, 2021
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="current-playing">
+            <div class="current-song-info">
+                <div class="current-song-image">
+                    <img src="butter.png" alt="">
+                </div>
+                <div class="current-song-name-info">
+                    <div class="current-song-name">
+                        Butter&nbsp; &nbsp;<i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="current-artist-name">
+                        BTS
+                    </div>
+                </div>
+            </div>
+
+            <div class="current-nav">
+                <div class="current-nav-top">
+                    <i class="fa-solid fa-repeat"></i>
+                    <i class="fa-solid fa-backward"></i>
+                    <i class="fa-solid fa-circle-pause"></i>
+                    <i class="fa-solid fa-forward"></i>
+                    <i class="fa-solid fa-rotate-left"></i>
+                </div>
+                <div class="current-nav-bottom">
+                    <div class="start-time"> 1 : 50 </div>
+                    <div class="progress-bar-original">
+                        <div class="progress-bar-1"></div>
+                        <div><i class="fa-solid fa-circle"></i></div>
+                        <div class="progress-bar-2"></div>
+                    </div>
+                    <div class="end-time"> 4 : 12</div>
+                </div>
+            </div>
+
+            <div class="current-vol">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="progress-bar-copy">
+                    <div class="progress-bar-1-copy"></div>
+                    <div><i class="fa-solid fa-circle"></i></div>
+                    <div class="progress-bar-2-copy"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+.aside{
+    margin-top: 10vh;
+    width: 35%;
+    height: 225vh;
+    background-color: rgb(6, 6, 77);
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-top: 3vh;
+}
+
+.queue-titlebar{
+    z-index: 9;
+    background-color: darkblue;
+    width: 35%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+    margin-top: -3vh;
+    padding-left: 1.5rem;
+    position: fixed;
+}
+
+.one-edge-shadow {
+    -webkit-box-shadow: 0 9px 6px -2px black;
+       -moz-box-shadow: 0 9px 6px -2px black;
+            box-shadow: 0 9px 6px -2px black;
+}
+
+.queue-title{
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-queue{
+    background-color: transparent !important;
+    color: cyan;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.my-button{
+    background-color: transparent;
+    color:cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-menu{
+    background-color: rgb(99, 99, 99) !important;
+    border: none;
+    color: cyan;
+}
+
+.dropdown-item{
+    color: white !important;
+    overflow-y: auto;
+    font-size: 0.8rem !important;
+}
+
+.dropdown-item:hover{
+    color: cyan !important;
+    background-color: transparent !important;
+    font-size: 0.9rem !important;
+}
+
+.songs-list{
+    display: block;
+}
+
+.queue-elements-container{
+    padding-left: 1.5rem;
+    margin-top: 7.5vh;
+    height: auto;
+}
+
+.queue-element{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    background-color: rgb(48, 48, 97);
+    color: white;
+}
+
+.queue-element:hover{
+    box-shadow: 0 0 3px 1px grey;
+}
+
+.song-image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.queue-number{
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    color: rgb(167, 165, 165);
+}
+
+.image-container{
+    position: relative;
+}
+
+.queue-song-image{
+    opacity: 1;
+    transition: 0.25s ease-in-out;
+}
+
+.queue-song-play{
+    position: absolute;
+    top: 17%;
+    left: 25%;
+    text-align: center;
+    opacity: 0;
+}
+
+.queue-element:hover .queue-song-image{
+    opacity: 0.7;
+}
+
+.queue-element:hover .queue-song-play{
+    opacity: 1;
+
+}
+.image-container img{
+    width: 3rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.queue-element:hover .image-container img{
+    width: 3.25rem;
+}
+
+.song-and-artist-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.playing-queue-song{
+    color: #21B6D9;
+    transform: rotate(-90deg);
+    margin-right: 0.9rem;
+}
+
+.queue-song-name{
+    font-size: 1rem;
+    color: white;
+}
+
+.queue-artist-name{
+    font-size: 0.8rem;
+    color: rgb(167, 165, 165);
+}
+
+.heart-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: rgb(167, 165, 165);
+}
+
+.queue-element:hover .queue-song-name{
+    font-size: 1.1rem;
+}
+.queue-element:hover .queue-artist-name{
+    font-size: 0.9rem;
+}
+.queue-element:hover .heart-link{
+    font-size: 1rem;
+}
+
+.heart-link:hover{
+    color: red;
+}
+
+@media screen and (max-width: 1100px){
+
+    .aside{
+        height: 200vh;
+    }
+    
+    .queue-element{
+        height: 3.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .queue-number{
+        margin-right: 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .image-container img{
+        width: 2.5rem;
+        border-radius: 4px;
+        margin-right: 0.8rem;
+    }
+
+    .queue-element:hover .image-container img{
+        width: 2.6rem;
+    }
+
+    .queue-song-name{
+        font-size: 0.9rem;
+    }
+
+    .queue-element:hover .queue-song-name{
+        font-size: 1rem;
+    }
+    
+    .queue-artist-name{
+        font-size: 0.7rem;
+    }
+
+    .queue-element:hover .queue-artist-name{
+        font-size: 0.8rem;
+    }
+    
+    .heart-link{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .aside{
+        margin-top: 7.5vh;
+    }
+}
+
+@media screen and (max-width: 750px){
+
+    .aside{
+        display: block;
+        width: 100%;
+    }
+
+    .queue-titlebar{
+        z-index: 10;
+        width: 100%;
+        height: 3rem;
+        margin-top: -4vh;
+        margin-bottom: 10vh !important;
+    }
+
+    .my-button{
+        font-size: 0.9rem !important;
+    }
+
+    .queue-title{
+        font-size: 1rem;
+    }
+
+    .queue-elements-container{
+        margin-bottom: 10vh !important;
+    }
+
+    .queue-element{
+        height: 3.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .queue-number{
+        margin-right: 1rem;
+        font-size: 1rem;
+    }
+    
+    .image-container img{
+        width: 3rem;
+        border-radius: 4px;
+        margin-right: 1rem;
+    }
+
+    .queue-song-name{
+        font-size: 1rem;
+    }
+    
+    .queue-artist-name{
+        font-size: 0.85rem;
+    }
+    
+    .heart-link{
+        font-size: 0.9rem;
+    }
+    
+    .queue-element:hover .image-container img{
+        width: 3.15rem;
+    }
+
+    .queue-element:hover .queue-song-name{
+        font-size: 1.1rem;
+    }
+
+    .queue-element:hover .queue-artist-name{
+        font-size: 0.9rem;
+    }
+
+    .queue-element:hover .heart-link{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .aside{
+        margin-top: 7vh;
+    }
+    .dropdown-item{
+        font-size: 0.8rem !important;
+    }
+    
+    .dropdown-item:hover{
+        font-size: 0.9rem !important;
+    }
+}
+
